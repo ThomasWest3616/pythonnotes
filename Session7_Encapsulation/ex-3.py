@@ -7,6 +7,7 @@ class Machine:
     def power(self):
         return self._power
 
+    
     @power.setter
     def power(self, new_power):
         if new_power == 1 and isinstance(new_power, int): 
@@ -22,36 +23,10 @@ class Machine:
 	    del self._power
 
 
-class Papertray():
-    def __init__(self, paper):
-        self.paper = paper
-    
-    @property
-    def paper(self):
-        return self._paper
-
-    @paper.setter
-    def paper(self, new_paper):
-        if new_paper <= 0 and isinstance(new_paper, int): 
-            new_paper = +100
-            self._paper = new_paper
-            print("Refilling paper with 100 pcs, new amount of paper is: " + new_paper)
-        else:
-            print("Amount of paper remaining: " + new_paper )
-
-    
-
-
-
-
-
-
-
-class Printer(Machine, Papertray):
-    def __init__(self, print, power, paper):
+class Printer(Machine):
+    def __init__(self, print, power):
         self._print = print
         super().__init__(power)
-        super().__init__(paper)
     
     @property
     def print(self):
@@ -61,5 +36,29 @@ class Printer(Machine, Papertray):
     def print(self, new_print):
         self._print = new_print
 
-printer1 = Printer("hej", 1, 6)
-print(printer1.paper)
+
+class Papertray():
+    def __init__(self, paper):
+        self._paper = paper
+    
+    @property
+    def paper(self):
+        return self._paper
+
+    @paper.setter
+    def paper(self, new_paper):
+        if new_paper <= 0 and isinstance(new_paper, int): 
+            new_paper = new_paper + 100
+            self._paper = new_paper
+            print("Refilling paper with 100 pcs, new amount of paper is")
+        else:
+            print("Amount of paper remaining: ")
+
+
+
+printer1 = Printer("This is a test print", 1)
+papertray1 = Papertray(-45)
+printer1.power = 1
+print(printer1.power)
+papertray1.paper = -45
+print(papertray1.paper)
