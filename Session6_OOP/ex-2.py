@@ -1,4 +1,4 @@
-# angry_bird.py
+# https://python-elective-kea.github.io/fall2021/ses6.html
 
 class Bird:
 
