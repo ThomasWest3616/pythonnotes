@@ -14,6 +14,7 @@ class Machine:
             self._power = new_power
             print("Machine is on")
         elif new_power == 0 and isinstance(new_power, int): 
+            self._power = new_power
             print("Machine is off")
         else:
             print("Value must be either 0 or 1")
@@ -58,7 +59,7 @@ class Papertray():
 
 printer1 = Printer("This is a test print", 1)
 papertray1 = Papertray(-45)
-printer1.power = 1
+printer1.power = 0
 print(printer1.power)
 papertray1.paper = -45
 print(papertray1.paper)
