@@ -44,7 +44,9 @@ d.cards[0] = 'Q'
 
 print(d.cards)
 
-del d.cards[1]
+del d[1]
+
+del(d[0])
 
 print(d.cards)
 
