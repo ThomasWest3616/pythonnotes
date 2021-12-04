@@ -1,0 +1,17 @@
+The features described below should for sure be implement.
+
+Make you LinkeList able to tell its length if len(llist) is called.
+
+You should be able to access the lists elements like this llist[1] and llist[-1]
+
+The list should be able to handle slicing syntax llist[1:4] and llist[-1:-4:-1]
+
+The list should be able to add new items using this syntax llist[3] = Node(3)
+
+The llinkedList should be able to return a string representation of its state when calling str() and repr()
+
+Make the linkedlist able to being added with another linkedlist using the + operator
+
+Multiply the list x times llist * 3
+
+Remember that a very good description of these underscore methods can be found in this weeks reading materials.
