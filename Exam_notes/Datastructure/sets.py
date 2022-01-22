@@ -1,5 +1,6 @@
 # Set Items
 # Set items are unordered, unchangeable, and do not allow duplicate values.
+# Note: Set items are unchangeable, but you can remove items and add new items.
 
 thisset = {"apple", "banana", "cherry"}
 print(thisset)
